@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bus Time Table</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Bus Schedule</h1>
+
+    <!-- Form to add new schedule -->
+    <form id="addForm">
+      <div class="form-row">
+        <input type="time" id="time" required>
+        <input type="date" id="date" required>
+        <select id="route" required>
+          <option value="">Select Route</option>
+          <option value="ILOILO">ILOILO</option>
+          <option value="San Dionisio">San Dionisio</option>
+        </select>
+        <button type="submit">Add Schedule</button>
+      </div>
+    </form>
+
+    <button onclick="sortByCurrentTime()">Sort by Current Time</button>
+
+    <table id="busTable">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Route</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
