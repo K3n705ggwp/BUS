@@ -43,9 +43,9 @@ function createRow(time, date, route) {
   const row = document.createElement("tr");
   row.innerHTML = `
     <td>${time}</td>
-    <td>${date}</td>
-    <td></td>
     <td>${route}</td>
+    <td></td>
+    <td>${date}</td>
   `;
   return row;
 }
@@ -53,7 +53,7 @@ function createRow(time, date, route) {
 function fillDays() {
   const rows = document.querySelectorAll("#busTable tbody tr");
   rows.forEach(row => {
-    const dateStr = row.cells[1].innerText.trim();
+    const dateStr = row.cells[3].innerText.trim();
     const date = new Date(dateStr);
     const dayName = date.toLocaleDateString("en-US", { weekday: 'long' });
     row.cells[2].innerText = dayName;
